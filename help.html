@@ -13,9 +13,13 @@
 
   <!-- toolkit styles -->
   <link rel="stylesheet" href="assets/toolkit.css">
+  <link rel="stylesheet" href="assets/oceia.css">
   <!-- /toolkit styles -->
  
   <link rel="shortcut icon" href="https://businessportal.sfgov.org/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/oceia.js"></script>
 
 </head>
 
@@ -300,7 +304,7 @@
 <div class="version-bar bar bg-primary">
   <div class="row">
     <div class="medium-12 columns">
-      <p class="text-right t-small c-white no-margin">This site is in <strong class="t-caps">BETA</strong>: We're just getting started. <br class="show-for-small-only"> We'd love to get <a href="#" class="a-white lined">your feedback</a>.</p>
+      <p class="text-right t-small c-white no-margin">This site is a <strong class="t-caps">PROTOTYPE</strong>: We're just getting started. <br class="show-for-small-only"> We'd love to get <a href="#" class="a-white lined">your feedback</a>.</p>
     </div>
   </div>
 </div><nav class="top-bar" role="navigation">
@@ -340,13 +344,72 @@
 
 <section id="main-content">
 <!-- CONTENT AREA START -->
-
-  <div class="row collapse">
-    <div class="medium-6 medium-centered columns fixed-width">
-      <h2 class="t-alt-sans">Coming soon!</h2>
-      <p class="t-alt-sans">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+  <section class="row form-card">
+    <div class="t-delta t-serif margin-bottom">What Language?</div>
+    <div class="checkbox-group">
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="en" id="languages-en">
+        <label class="checkbox-block_label" for="languages-en">English</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="es" id="languages-es">
+        <label class="checkbox-block_label" for="languages-es">Spanish</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="ch" id="languages-ch">
+        <label class="checkbox-block_label" for="languages-ch">Chinese</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="vi" id="languages-vi">
+        <label class="checkbox-block_label" for="languages-vi">Vietnamese</label>
+      </p>
     </div>
-  </div>
+    <div class="button-stack--paginate row">
+      <div class="small-12 medium-6 medium-push-6 columns">
+        <button class="button right" id="languages-next">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="row form-card">
+    <div class="t-delta t-serif margin-bottom">Are they a permanent resident?</div>
+    <div class="button-stack text-center row padding-top">
+      <div class="small-12 medium-6 columns">
+        <button class="button" id="permanent-yes">Yes</button>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <button class="button" id="permanent-no">No</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="row form-card">
+    <div class="t-delta t-serif margin-bottom">Are they facing detention?</div>
+    <div class="radio-group">
+      <p>
+        <input type="radio" name="detention" value="detained" id="detention-detained">
+        <label class="radio_label" for="detention-detained">Yes, detained</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="court" id="detention-court">
+        <label class="radio_label" for="detention-court">Yes, have a court date</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="no" id="detention-no">
+        <label class="radio_label" for="detention-no">No</label>
+      </p>
+    </div>
+    <div class="button-stack--paginate row">
+      <div class="small-12 medium-6 medium-push-6 columns">
+        <button class="button right" id="detention-next">Next</button>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  
 
 
 
