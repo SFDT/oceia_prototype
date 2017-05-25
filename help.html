@@ -342,9 +342,19 @@
   </div>
 </nav>
 
+<header class="lead-header bg-dark bg-gradient">
+  <div class="row">
+    <div class="large-12 columns">
+      <hgroup class="lead-header_group">
+        <h1 class="lead-header_title c-white">Getting Immigration Help</h1>
+      </hgroup>
+    </div>
+  </div>
+</header>
+
 <section id="main-content">
 <!-- CONTENT AREA START -->
-  <section class="row form-card">
+  <section class="row form-card question" id="question-languages">
     <div class="t-delta t-serif margin-bottom">What Language?</div>
     <div class="checkbox-group">
       <p class="checkbox-block">
@@ -353,65 +363,67 @@
       </p>
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="es" id="languages-es">
-        <label class="checkbox-block_label" for="languages-es">Spanish</label>
+        <label class="checkbox-block_label" for="languages-es">Spanish 
+Español</label>
       </p>
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="ch" id="languages-ch">
-        <label class="checkbox-block_label" for="languages-ch">Chinese</label>
+        <label class="checkbox-block_label" for="languages-ch">Chinese 中文</label>
       </p>
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="vi" id="languages-vi">
-        <label class="checkbox-block_label" for="languages-vi">Vietnamese</label>
+        <label class="checkbox-block_label" for="languages-vi">Vietnamese 
+Tiếng Việt</label>
       </p>
     </div>
     <div class="button-stack--paginate row">
       <div class="small-12 medium-6 medium-push-6 columns">
-        <button class="button right" id="languages-next">Next</button>
+        <button class="button right" data-name="languages" data-next="question-resident" data-error="Please select one or more languages">Next</button>
       </div>
     </div>
   </section>
 
-  <section class="row form-card">
+  <section class="row form-card question" id="question-resident">
     <div class="t-delta t-serif margin-bottom">Are they a permanent resident?</div>
     <div class="button-stack text-center row padding-top">
-      <div class="small-12 medium-6 columns">
-        <button class="button" id="permanent-yes">Yes</button>
+      <div class="small-12 medium-4 columns">
+        <button class="button" data-next="resultsA.html">Yes</button>
       </div>
-      <div class="small-12 medium-6 columns">
-        <button class="button" id="permanent-no">No</button>
+      <div class="small-12 medium-4 columns">
+        <button class="button" data-next="question-detention">No</button>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <button class="button" data-next="resultsD.html">Not Sure</button>
       </div>
     </div>
   </section>
   
-  <section class="row form-card">
+  <section class="row form-card question" id="question-detention">
     <div class="t-delta t-serif margin-bottom">Are they facing detention?</div>
     <div class="radio-group">
       <p>
-        <input type="radio" name="detention" value="detained" id="detention-detained">
+        <input type="radio" name="detention" value="resultsB.html" id="detention-detained">
         <label class="radio_label" for="detention-detained">Yes, detained</label>
       </p>
       <p>
-        <input type="radio" name="detention" value="court" id="detention-court">
-        <label class="radio_label" for="detention-court">Yes, have a court date</label>
+        <input type="radio" name="detention" value="resultsC.html" id="detention-court">
+        <label class="radio_label" for="detention-court">Yes, have a court date or active deportation order</label>
       </p>
       <p>
-        <input type="radio" name="detention" value="no" id="detention-no">
+        <input type="radio" name="detention" value="resultsD.html" id="detention-no">
         <label class="radio_label" for="detention-no">No</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="resultsD.html" id="detention-notsure">
+        <label class="radio_label" for="detention-notsure">Not Sure</label>
       </p>
     </div>
     <div class="button-stack--paginate row">
       <div class="small-12 medium-6 medium-push-6 columns">
-        <button class="button right" id="detention-next">Next</button>
+        <button class="button right" data-name="detention" data-error="Choose one of the following" data-next="value">Next</button>
       </div>
     </div>
   </section>
-
-  
-
-
-  
-
-
 
 <!-- CONTENT AREA END -->
 </section>
