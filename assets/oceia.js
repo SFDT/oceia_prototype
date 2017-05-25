@@ -23,8 +23,9 @@
       }
     },
     qs : function(){
+      var hide = function(){$('.question').hide(); }
       $('.question button').click(function(e){
-        var el = $(this), name = el.data('name'), next = el.data('next'), value = false, hide = function(){$('.question').hide(); }; 
+        var el = $(this), name = el.data('name'), next = el.data('next'), value = false; 
         oceia.msg.clear();
         
         if(name){
@@ -41,7 +42,7 @@
               selected.push(input.val());
             }
             if(!selected.length){
-              oceia.msg.display((el.data('error')?el.data('error'):'Required'),el.closest('.question').find('div:first-child').first());
+              oceia.msg.display((el.data('error')?el.data('error'):'Required'),el.closest('.question').find('div:not(.form-back)').first());
               return;
             }
           }
@@ -59,6 +60,15 @@
           return; 
         }
       }); 
+
+      $('.question .form-back a').click(function(e){
+        e.preventDefault(); 
+        var el = $(this), back = el.data('href');
+        if($('#'+back).length){
+          hide(); $('#'+back).show(); 
+        }
+      });
+
     },
     ready : function(){
       oceia.qs();
