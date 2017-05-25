@@ -48,11 +48,13 @@
         }
 
         if(next){ 
-          next = (next=='value' && value)?value:next;
+          next = (next=='value' && value !== false)?value:next;
           if($('#'+next).length){
             hide(); $('#'+next).show(); 
           }else{
-           _w.location.href=next;
+            if(next){
+              _w.location.href=next;
+            } 
           }
           return; 
         }
