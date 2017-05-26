@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- <title>Application</title> -->
-  <title>Prototype: OCEIA</title>
+  <title>[Prototype] Get Immigration Help | City and County of San Francisco</title>
 
   
 
@@ -345,9 +345,12 @@
 <header class="lead-header bg-dark bg-gradient margin-bottom--2x">
   <div class="row">
     <div class="large-12 columns">
-      <hgroup class="lead-header_group">
-        <h1 class="lead-header_title c-white">Getting Immigration Help</h1>
-      </hgroup>
+      <div class="lead-header_group">
+        <h1 class="lead-header_title c-white">Get Immigration Help</h1>
+         <div class="medium-8 columns no-padding show-for-medium-up">
+            <p class="t-epsilon t-serif c-white">Enter details about language and immigration status, and we'll show options for immigration assistance.</p>
+          </div>
+      </div>
     </div>
   </div>
 </header>
@@ -356,7 +359,8 @@
 <!-- CONTENT AREA START -->
   <div class="medium-centered margin-bottom--2x">
   <section class="row form-card question" id="question-languages">
-    <div class="t-delta t-serif margin-bottom">What Language?</div>
+    <div class="t-delta t-serif margin-bottom">What language does the immigrant who needs help speak?</div>
+    <p class="c-steel">Choose all that apply.</p>
     <div class="checkbox-group">
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="en" id="languages-en">
@@ -365,16 +369,16 @@
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="es" id="languages-es">
         <label class="checkbox-block_label" for="languages-es">Spanish 
-Español</label>
+| Español</label>
       </p>
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="ch" id="languages-ch">
-        <label class="checkbox-block_label" for="languages-ch">Chinese 中文</label>
+        <label class="checkbox-block_label" for="languages-ch">Chinese | 中文</label>
       </p>
       <p class="checkbox-block">
         <input type="checkbox" name="languages" value="vi" id="languages-vi">
         <label class="checkbox-block_label" for="languages-vi">Vietnamese 
-Tiếng Việt</label>
+| Tiếng Việt</label>
       </p>
     </div>
     <div class="button-stack--paginate row">
@@ -388,7 +392,8 @@ Tiếng Việt</label>
     <div class="form-back">
       <a data-href="question-languages" class="lined margin-right">Back</a>
     </div>
-    <div class="t-delta t-serif margin-bottom">Are they a permanent resident?</div>
+    <div class="t-delta t-serif margin-bottom">Is the immigrant who needs help a permanent resident?</div>
+        <p class="c-steel">Do they have a green card?</p>
     <div class="button-stack text-center row padding-top">
       <div class="small-12 medium-6 columns">
         <button class="button" data-next="resultsA.html">Yes</button>
@@ -397,7 +402,7 @@ Tiếng Việt</label>
         <button class="button" data-next="question-detention">No</button>
       </div>
       <div class="small-12 medium-12 columns">
-        <button class="button button-link button-lined medium-text-center" data-next="resultsD.html">Not Sure</button>
+        <button class="button button-link button-lined medium-text-center" data-next="resultsD.html">I'm not sure</button>
       </div>
     </div>
   </section>
@@ -406,15 +411,15 @@ Tiếng Việt</label>
     <div class="form-back">
       <a data-href="question-resident" class="lined margin-right">Back</a>
     </div>
-    <div class="t-delta t-serif margin-bottom">Are they facing detention?</div>
+    <div class="t-delta t-serif margin-bottom">Are they currently facing active deportation?</div>
     <div class="radio-group">
       <p>
         <input type="radio" name="detention" value="resultsB.html" id="detention-detained">
-        <label class="radio_label" for="detention-detained">Yes, detained</label>
+        <label class="radio_label" for="detention-detained">Yes, they have been detained</label>
       </p>
       <p>
         <input type="radio" name="detention" value="resultsC.html" id="detention-court">
-        <label class="radio_label" for="detention-court">Yes, have a court date or active deportation order</label>
+        <label class="radio_label" for="detention-court">Yes, they have an active deportation order and/or court date</label>
       </p>
       <p>
         <input type="radio" name="detention" value="resultsD.html" id="detention-no">
@@ -422,7 +427,7 @@ Tiếng Việt</label>
       </p>
       <p>
         <input type="radio" name="detention" value="resultsD.html" id="detention-notsure">
-        <label class="radio_label" for="detention-notsure">Not Sure</label>
+        <label class="radio_label" for="detention-notsure">I'm not sure</label>
       </p>
     </div>
     <div class="button-stack--paginate row">
@@ -441,8 +446,8 @@ Tiếng Việt</label>
       <img src="assets/logo-city-gray.png" class="city-logo margin-bottom--2x" alt="City & County of San Francisco Logo">
     </div>
     <div class="medium-8 medium-centered columns">
-      <p class="c-iron">This service is built in partnership with <a href="#" class="a-white">Office of Civic Engagement &amp; Immigrant Affairs</a><br>
-         <a href="#" class="a-white">San Francisco Department of Technology</a>
+      <p class="c-iron">This service is built in partnership with <br><a href="http://sfgov.org/oceia" class="a-white">Office of Civic Engagement &amp; Immigrant Affairs</a><br>
+         <a href="http://digitalservices.sfgov.org" class="a-white">San Francisco Digital Services</a>
       </p>
 
     </div>
@@ -455,7 +460,7 @@ Tiếng Việt</label>
       <div class="medium-6 columns small-only-text-center">
         <ul class="inline-list">
           <li>
-            <a href="#">Contact</a>
+            <a href="http://sfgov.org/oceia/contact-us">Contact</a>
           </li>
         </ul>
       </div>
