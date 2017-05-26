@@ -13,9 +13,13 @@
 
   <!-- toolkit styles -->
   <link rel="stylesheet" href="assets/toolkit.css">
+  <link rel="stylesheet" href="assets/oceia.css">
   <!-- /toolkit styles -->
  
   <link rel="shortcut icon" href="https://businessportal.sfgov.org/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/oceia.js"></script>
 
 </head>
 
@@ -300,7 +304,7 @@
 <div class="version-bar bar bg-primary">
   <div class="row">
     <div class="medium-12 columns">
-      <p class="text-right t-small c-white no-margin">This site is in <strong class="t-caps">BETA</strong>: We're just getting started. <br class="show-for-small-only"> We'd love to get <a href="#" class="a-white lined">your feedback</a>.</p>
+      <p class="text-right t-small c-white no-margin">This site is a <strong class="t-caps">PROTOTYPE</strong>: We're just getting started. <br class="show-for-small-only"> We'd love to get <a href="#" class="a-white lined">your feedback</a>.</p>
     </div>
   </div>
 </div><nav class="top-bar" role="navigation">
@@ -338,18 +342,96 @@
   </div>
 </nav>
 
-<section id="main-content">
-<!-- CONTENT AREA START -->
-
-  <div class="row collapse">
-    <div class="medium-6 medium-centered columns fixed-width">
-      <h2 class="t-alt-sans">Coming soon!</h2>
-      <p class="t-alt-sans">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<header class="lead-header bg-dark bg-gradient margin-bottom--2x">
+  <div class="row">
+    <div class="large-12 columns">
+      <hgroup class="lead-header_group">
+        <h1 class="lead-header_title c-white">Getting Immigration Help</h1>
+      </hgroup>
     </div>
   </div>
+</header>
 
+<section id="main-content">
+<!-- CONTENT AREA START -->
+  <div class="medium-centered margin-bottom--2x">
+  <section class="row form-card question" id="question-languages">
+    <div class="t-delta t-serif margin-bottom">What Language?</div>
+    <div class="checkbox-group">
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="en" id="languages-en">
+        <label class="checkbox-block_label" for="languages-en">English</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="es" id="languages-es">
+        <label class="checkbox-block_label" for="languages-es">Spanish 
+Español</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="ch" id="languages-ch">
+        <label class="checkbox-block_label" for="languages-ch">Chinese 中文</label>
+      </p>
+      <p class="checkbox-block">
+        <input type="checkbox" name="languages" value="vi" id="languages-vi">
+        <label class="checkbox-block_label" for="languages-vi">Vietnamese 
+Tiếng Việt</label>
+      </p>
+    </div>
+    <div class="button-stack--paginate row">
+      <div class="small-12 medium-6 medium-push-6 columns">
+        <button class="button right primary" data-name="languages" data-next="question-resident" data-error="Please select one or more languages">Next</button>
+      </div>
+    </div>
+  </section>
 
-
+  <section class="row form-card question" id="question-resident">
+    <div class="form-back">
+      <a data-href="question-languages" class="lined margin-right">Back</a>
+    </div>
+    <div class="t-delta t-serif margin-bottom">Are they a permanent resident?</div>
+    <div class="button-stack text-center row padding-top">
+      <div class="small-12 medium-6 columns">
+        <button class="button" data-next="resultsA.html">Yes</button>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <button class="button" data-next="question-detention">No</button>
+      </div>
+      <div class="small-12 medium-12 columns">
+        <button class="button button-link button-lined medium-text-center" data-next="resultsD.html">Not Sure</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="row form-card question" id="question-detention">
+    <div class="form-back">
+      <a data-href="question-resident" class="lined margin-right">Back</a>
+    </div>
+    <div class="t-delta t-serif margin-bottom">Are they facing detention?</div>
+    <div class="radio-group">
+      <p>
+        <input type="radio" name="detention" value="resultsB.html" id="detention-detained">
+        <label class="radio_label" for="detention-detained">Yes, detained</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="resultsC.html" id="detention-court">
+        <label class="radio_label" for="detention-court">Yes, have a court date or active deportation order</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="resultsD.html" id="detention-no">
+        <label class="radio_label" for="detention-no">No</label>
+      </p>
+      <p>
+        <input type="radio" name="detention" value="resultsD.html" id="detention-notsure">
+        <label class="radio_label" for="detention-notsure">Not Sure</label>
+      </p>
+    </div>
+    <div class="button-stack--paginate row">
+      <div class="small-12 medium-6 medium-push-6 columns">
+        <button class="button right primary" data-name="detention" data-error="Choose one of the following" data-next="value">Next</button>
+      </div>
+    </div>
+  </section>
+  </div>
 <!-- CONTENT AREA END -->
 </section>
 
