@@ -7860,7 +7860,7 @@ body {
 body.body-block {
   display: block; }
 
-.site-container {
+.jscontainer {
   display: table-row;
   height: 100%; }
 
@@ -8145,7 +8145,7 @@ body.body-block {
   z-index: 2; }
   @media only screen and (min-width: 48.0625em) {
     .hero-header {
-      padding: 8rem 1rem 2rem 1rem; } }
+      padding: 16rem 1rem 3rem 1rem; } }
 
 @media only screen and (max-width: 48em) {
   .hero-title {
@@ -8154,7 +8154,7 @@ body.body-block {
 .splash-header {
   position: relative; }
   .splash-header.bg-image {
-    background-image: url("../images/sf-homes-wide.jpg");
+    background-image: url("../images/flag.jpg");
     background-size: cover;
     background-position: bottom left; }
   .splash-header:before {
@@ -8203,7 +8203,7 @@ body.body-block {
     background-color: #205493; }
     @media only screen and (min-width: 48.0625em) {
       .lead-header.bg-image {
-        background-image: url("../images/sf-homes-wide.jpg");
+        background-image: url("../images/child_cropped_more.jpg");
         background-size: cover;
         background-position: bottom left; } }
 
