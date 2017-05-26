@@ -7766,7 +7766,7 @@ a.toggle-nav-link {
       position: relative;
       z-index: 103; } }
   .name-logo a {
-    background: url("../images/logo-portal.png") no-repeat;
+    background: url("../images/header_logo.png") no-repeat;
     overflow: hidden;
     text-indent: -9999px;
     background-position: center left;
