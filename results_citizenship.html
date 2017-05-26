@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- <title>Application</title> -->
-  <title>Prototype: OCEIA</title>
+  <title>[PROTOTYPE] Help for Permanent Residents | Get Immigration Help | City and County of San Francisco</title>
 
   
 
@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="center-body">
+<body>
 
   <!-- app icons -->
   <svg style="display: none;">
@@ -325,12 +325,12 @@
     <ul class="nav-menu right">
       <li>
         <a href="info.html">
-          Get Info
+          The Law
         </a>
       </li>
       <li>
         <a href="help.html">
-          Get Help
+          Find Help
         </a>
       </li>  
 
@@ -368,49 +368,174 @@
   </div>
 </header> -->
 
+
+
+<header class="lead-header ng-scope" ng-if="hasEligibilityFilters()">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h1 class="lead-header_title ng-scope" translate="LISTINGS.SHOWING_MATCHES_FOR">Become A Citizen</h1>
+      <div class="results-header">
+        <p class="results-header_values ng-binding">Showing help for a <strong class="ng-binding">permanent resident </strong>who speaks <strong class="ng-binding">Spanish</strong></p>
+        <div class="results-header_actions">
+          <a class="button tiny" href="help.html">Start Over</a>
+        </div>
+      </div>
+   </div>
+  </div>
+</header>
+
+
 <section class="margin-top--2x margin-bottom--2x">
   <div class="row">
     <div class="large-12 columns">
       <div class="block--short bg-dust">
-        <h2 class="t-delta t-serif c-oil">For more help, we suggest coming to the next Pathways to Citizenship workshop on June 17, 2017.</h2>
-        <p>Details about it.</p>
-
-        <a href="#" class="button ghost-white">Learn more</a>
+         <h2 class="t-delta t-serif c-oil">You may be eligible to naturalize as a citizen.</h2>
+        <a href="https://sfpathways2citizenship.wordpress.com/eligibility/" class="button ghost-white" target="_blank">Am I eligible?</a>
+        <h2 class="t-delta t-serif c-oil">For more help, come to the next Pathways to Citizenship workshop on June 17, 2017.</h2>
+        <a href="http://sfcitizenship.org/" class="button primary" target="_blank">Attend the Workshop</a>
+        <h2 class="t-delta t-serif c-oil">You can also apply online through Citizenshipworks</h2>
+        <a href="http://citizenshipworks.org/" class="button ghost-white" target="_blank">Apply Online</a>
       </div>
     </div>
   </div>  
 </section>
 
+<section class="results-section border-top">
 <section class="row">
+
+<div class="status-header_content">
+  <div class="status-header_icon">
+    <span class="ui-icon ui-xlarge"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-building"></use></svg></span>
+  </div>
+  <hgroup class="status-header_group">
+    <h2 class="status-header_title gamma ng-binding">Who can help</h2>
+    <p class="no-margin ng-binding ng-scope">The non-profits below can offer assistance with naturalization, green card renewal, family petitions, and other immportant services for permanent residents.</p>
+  </hgroup>
+</div>
+
+
+
+
   <div class="medium-8 columns">
-    <article class="page-content">
-      <div class="content-section">
-        <h3>What does it mean that San Francisco is a Sanctuary City?</h3>
-        <p>Re-write key parts of http://sfgov.org/oceia/sanctuary-city-ordinance-0 with a "you" voice. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      
-      <hr class="tall">
+   <ul class="resources-list block-list">
 
-      
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Asian, Inc.</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <p class="t-tiny c-steel">Language Services: 
+            <span class="label radius secondary">Cantonese</span> 
+            <span class="label radius secondary">Vietnamese</span> 
+        </p>
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+            </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+            167 Mission Street, 4th Floor, <br>
+            San Francisco, CA 94103
+          </p>
+        </div>    
+        <p>
+          <a href="415-928-5910" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+              </svg>
+            </span>
+            Call 415-928-5910
+          </a>
+          <a href="asianinc.org" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+              </svg>
+            </span>
+            Visit Website
+          </a>
+        </p>
+      </li>
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Bill Sorro Housing Program of the Veterans Equity Center</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <p class="t-tiny c-steel">Language Services: 
+            <span class="label radius secondary">Tagalog</span> 
+        </p>
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+            </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+            1010 Mission Street, Suite C, <br>
+            San Francisco, CA 94103
+          </p>
+        </div>    
+        <p>
+          <a href="415-255-2347" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+              </svg>
+            </span>
+            Call 415-255-2347
+          </a>
+          <a href="bishop.vetsequitycenter.org" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+              </svg>
+            </span>
+            Visit Website
+          </a>
+        </p>
+      </li>
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Consumer Credit Counseling Service of San Francisco</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+            </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+            595 Market Street, 15th Floor, <br>
+            San Francisco, CA 94105
+          </p>
+        </div>    
+        <p>
+          <a href="800-777-7526" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+              </svg>
+            </span>
+            Call 800-777-7526
+          </a>
+          <a href="cccssf.org" class="button-on-small">
+            <span class="ui-icon ui-static ui-medium i-color ">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+              </svg>
+            </span>
+            Visit Website
+          </a>
+        </p>
+      </li>
 
-      
-    </article>
+
+
+
+    </ul>
   </div> 
 </section>
-
-<section class="row margin-bottom--2x">
-  <div class="medium-12 columns">
-    <div class="bg-dust">
-      <div class="tall-block ">
-        <figure class="block-icon">
-          <img src="assets/icon-mail.png"" alt="icon">
-        </figure>
-        <h2 class="t-delta t-serif c-oil no-margin">Get emailed about important immigration policy news.</h1>
-        <a href="#" class="button ghost-white margin-top">Sign Up</a>
-      </div>    </div>
-  </div>
 </section>
 
+
+</section>
 
 <footer class="footer-section bg-tuatara ">
   <div class="row text-center padding-top--2x padding-bottom--2x">
