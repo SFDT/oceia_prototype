@@ -8203,7 +8203,7 @@ body.body-block {
     background-color: #205493; }
     @media only screen and (min-width: 48.0625em) {
       .lead-header.bg-image {
-        background-image: url("../images/child_cropped_more.jpg");
+        background-image: url("../images/child_cropped.jpg");
         background-size: cover;
         background-position: bottom left; } }
 
