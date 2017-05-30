@@ -357,8 +357,9 @@
 
 <section id="main-content">
 <!-- CONTENT AREA START -->
-  <div class="medium-centered margin-bottom--2x">
-  <section class="row form-card question" id="question-languages">
+  <div class="row margin-bottom--2x">
+  <div class="medium-10 medium-centered columns">
+  <section class="form-card question" id="question-languages">
     <div class="t-delta t-serif margin-bottom">What language does the immigrant who needs help speak?</div>
     <p class="c-steel">Choose all that apply.</p>
     <div class="checkbox-group">
@@ -388,26 +389,28 @@
     </div>
   </section>
 
-  <section class="row form-card question" id="question-resident">
+  <section class="form-card question" id="question-resident">
     <div class="form-back">
       <a data-href="question-languages" class="lined margin-right">Back</a>
     </div>
     <div class="t-delta t-serif margin-bottom">Is the immigrant who needs help a permanent resident?</div>
         <p class="c-steel">Do they have a green card?</p>
-    <div class="button-stack text-center row padding-top">
-      <div class="small-12 medium-6 columns">
-        <button class="button" data-next="results_citizenship.html">Yes</button>
-      </div>
-      <div class="small-12 medium-6 columns">
-        <button class="button" data-next="question-detention">No</button>
-      </div>
-      <div class="small-12 medium-12 columns">
-        <button class="button button-link button-lined medium-text-center" data-next="results_screening.html">I'm not sure</button>
+    <div class="button-stack text-center padding-top row">
+      <div class="medium-10 medium-centered columns">
+        <div class="small-12 medium-6 columns">
+          <button class="button" data-next="results_citizenship.html">Yes</button>
+        </div>
+        <div class="small-12 medium-6 columns">
+          <button class="button" data-next="question-detention">No</button>
+        </div>
+        <div class="small-12 medium-12 columns">
+          <button class="button button-link button-lined medium-text-center" data-next="results_screening.html">I'm not sure</button>
+        </div>
       </div>
     </div>
   </section>
   
-  <section class="row form-card question" id="question-detention">
+  <section class="form-card question" id="question-detention">
     <div class="form-back">
       <a data-href="question-resident" class="lined margin-right">Back</a>
     </div>
@@ -436,6 +439,7 @@
       </div>
     </div>
   </section>
+  </div>
   </div>
 <!-- CONTENT AREA END -->
 </section>
