@@ -76,6 +76,7 @@
         oceia.hide(el, $('#'+el.data('toggle')), el.data('hidden')); 
       });
       $('button[data-toggle]').click(function(e){
+        e.preventDefault();
         var el = $(this), elToggle = $('#'+el.data('toggle')); 
         if(elToggle.is(':visible')){
           oceia.hide(el, elToggle, el.data('hidden')); 
@@ -93,7 +94,18 @@
       el.text(text);
       elToggle.show(); 
     },
+    menu : function(){
+      $('nav.top-bar button.button-link').click(function(e){
+        e.preventDefault();
+        $('.nav-mobile_container').removeClass('hidden');
+      }); 
+      $('.nav-mobile_container button.nav-mobile_menu-icon').click(function(e){
+        e.preventDefault();
+        $('.nav-mobile_container').addClass('hidden');
+      }); 
+    },
     ready : function(){
+      oceia.menu();
       oceia.qs();
       oceia.toggles(); 
     }
