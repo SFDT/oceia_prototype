@@ -20,5 +20,16 @@
   width: 0;
 }
 
+.form-back {
+	padding-left: 1rem;
+    padding-right: 1rem;
+    color: #0077da;
+    font-weight: 400 !important;
+    text-decoration: underline;
+    line-height: 3rem;
+	font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+	letter-spacing: normal;
+}
+
 
 
