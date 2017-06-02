@@ -1,14 +1,13 @@
 "use strict";
 (function(_w, _d, $, _v){
-  var cmn = { supportLocalStorage : function(){ return (_w.localStorage!=undefined); } }
-  _v = (typeof _v == 'undefined')?{}:_v;
-  cmn = {
-    setItem : function(key,value){ if(cmn.supportLocalStorage()){_w.localStorage.setItem(key,value);return true;}return false;},
-    getItem : function(key){if(cmn.supportLocalStorage()){ return _w.localStorage.getItem(key);}return null;},
+  var cmn = {
+    supportLocalStorage : function(){ return (_w.localStorage!=undefined); },
+    setItem : function(key,value){ if(this.supportLocalStorage()){_w.localStorage.setItem(key,value);return true;}return false;},
+    getItem : function(key){if(this.supportLocalStorage()){ return _w.localStorage.getItem(key);}return null;},
     setItemObj : function(key,value){return setItem(key,JSON.stringify(value));},
     getItemObj : function(key){var o = getItem(key); if(o){o=JSON.parse(o);} return o;},
-    removeItem : function(key){if(cmn.supportLocalStorage()){return _w.localStorage.removeItem(key);}return false;},
-    clearStorage : function(){ if(cmn.supportLocalStorage()){return _w.localStorage.clear();}return false;},
+    removeItem : function(key){if(this.supportLocalStorage()){return _w.localStorage.removeItem(key);}return false;},
+    clearStorage : function(){ if(this.supportLocalStorage()){return _w.localStorage.clear();}return false;},
     set : function(key,value){ _v[key] = value;},
     get : function(key){return _v[key];},
   }
@@ -23,10 +22,10 @@
       }
     },
     qs : function(){
-      var hide = function(){$('.question').hide(); }
+      var _t = this, hide = function(){$('.question').hide(); }
       $('.question button[data-next]').click(function(e){
         var el = $(this), name = el.data('name'), next = el.data('next'), value = false; 
-        oceia.msg.clear();
+        _t.msg.clear();
         
         if(name){
           var selected = [], input = $('.question *[name="'+name+'"]');
@@ -42,7 +41,7 @@
               selected.push(input.val());
             }
             if(!selected.length){
-              oceia.msg.display((el.data('error')?el.data('error'):'Required'),el.closest('.question').find('div:not(.form-back)').first());
+              _t.msg.display((el.data('error')?el.data('error'):'Required'),el.closest('.question').find('div:not(.form-back)').first());
               return;
             }
           }
@@ -68,31 +67,33 @@
           hide(); $('#'+back).show(); 
         }
       });
-
+      return this; 
     },
     toggles : function(){
+      var _t = this, 
+          hide =  function(el, elToggle, text){
+            el.text(text);
+            elToggle.hide(); 
+          },
+          show = function(el, elToggle, text){
+            el.text(text);
+            elToggle.show(); 
+          }; 
       $('button[data-toggle]').each(function(i){
         var el = $(this);
-        oceia.hide(el, $('#'+el.data('toggle')), el.data('hidden')); 
+        hide(el, $('#'+el.data('toggle')), el.data('hidden')); 
       });
       $('button[data-toggle]').click(function(e){
         e.preventDefault();
         var el = $(this), elToggle = $('#'+el.data('toggle')); 
         if(elToggle.is(':visible')){
-          oceia.hide(el, elToggle, el.data('hidden')); 
+          hide(el, elToggle, el.data('hidden')); 
         }else{
-          oceia.show(el, elToggle, el.data('shown')); 
+          show(el, elToggle, el.data('shown')); 
         }
 
       });
-    },
-    hide : function(el, elToggle, text){
-      el.text(text);
-      elToggle.hide(); 
-    },
-    show : function(el, elToggle, text){
-      el.text(text);
-      elToggle.show(); 
+      return this; 
     },
     menu : function(){
       $('nav.top-bar button.button-link').click(function(e){
@@ -103,12 +104,11 @@
         e.preventDefault();
         $('.nav-mobile_container').addClass('hidden');
       }); 
+      return this; 
     },
-    ready : function(){
-      oceia.menu();
-      oceia.qs();
-      oceia.toggles(); 
+    ready : function(){ 
+      this.menu().qs().toggles(); 
     }
-  }
-  $(document).ready(oceia.ready);
-})(window, document, jQuery);
+  }; 
+  $(document).ready(function(){oceia.ready()});
+})(window, document, jQuery, {});
