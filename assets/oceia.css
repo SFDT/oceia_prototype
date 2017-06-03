@@ -1,2 +1,40 @@
 .question{ display: none; }
 .question:first-child{ display: block; }
+
+#become-a-citizen header,
+#deportation-defense header,
+#rapid-response header,
+#screening header {
+	background: #daeeff;
+}
+
+header .results-header_values {text-transform: none;}
+
+header p {
+	margin-bottom: .3em !important;
+}
+
+
+header .results-header_values strong {
+	font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+header .results-header_values .tiny {
+	font-size: 70%;
+}
+
+header .call-to-action {
+	margin: 4rem 0;
+}
+
+header .call-to-action h2 {
+	padding-right: 2em;
+	padding-bottom: 1em;
+}
+
+header .call-to-action .columns .button {
+	width: 60%;
+	margin: 1em 0;
+	display: block;
+}
