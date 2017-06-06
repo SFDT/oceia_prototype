@@ -13,6 +13,7 @@
 
   <!-- toolkit styles -->
   <link rel="stylesheet" href="assets/toolkit.css">
+  <link rel="stylesheet" href="assets/oceia.css">
   <!-- /toolkit styles -->
  
    <!-- oceia styles -->
@@ -20,6 +21,9 @@
   <!-- /oceia styles -->
  
   <link rel="shortcut icon" href="https://businessportal.sfgov.org/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/oceia.js"></script>
 
 </head>
 
@@ -299,6 +303,31 @@
   </svg>
   <!-- /app icons -->
 
+<div class="nav-mobile_container hidden">
+  <header class="nav-mobile_header"><button aria-label="Close Menu" class="nav-mobile_menu-icon nav-mobile-topfocus i-white button-link nav-mobile-focus" title="Close Menu"><span class="ui-icon ui-medium i-white"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-right"></use></svg></span></button></header>
+  <ul class="nav-mobile">
+    <li class="">
+      <a href="info.html">The Law</a>
+    </li>
+    <li class="">
+      <a href="help.html">Find Help</a>
+    </li>
+  </ul>
+</div>
+
+<div class="nav-mobile_container hidden">
+  <header class="nav-mobile_header"><button aria-label="Close Menu" class="nav-mobile_menu-icon nav-mobile-topfocus i-white button-link nav-mobile-focus" title="Close Menu"><span class="ui-icon ui-medium i-white"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-right"></use></svg></span></button></header>
+  <ul class="nav-mobile">
+    <li class="">
+      <a href="info.html">The Law</a>
+    </li>
+    <li class="">
+      <a href="help.html">Find Help</a>
+    </li>
+  </ul>
+</div>
+
+<section><div class="translate-bar bar bg-tuatara ng-scope"><div class="row"><div class="medium-12 columns"><ul class="inline-list no-margin t-small right"><li class="c-iron show-for-medium-up">Select Language</li><li><a class="c-white" href="#">Español</a></li><li><a class="c-white t-ch" href="#">中文<span class="sr-only">Chinese</span></a></li><li><a class="c-white" href="#">Filipino</a></li></ul></div></div></div></section>
 
 <div class="version-bar bar bg-primary">
   <div class="row">
@@ -343,65 +372,33 @@
   </div>
 </nav>
 
-
-<section id="main-content" ui-view="container" class="ng-scope">
-<!-- <header class="lead-header">
-  <div class="row">
-    <div class="medium-12 columns">
-      
-      <h1 class="lead-header_title">Showing resources for</h1>
-
-      <div class="results-header">
-        <p class="results-header_values">A <strong>permanent resident</strong> who speaks <strong>Spanish</strong></p>
-
-        <div class="results-header_actions">
-          <a href="#" class="button ghost-white tiny has-icon has-icon--right">Edit Eligibility <span class="ui-icon ui-static ui-small i-color ">
-  <svg>
-    <use xlink:href="#i-arrow-down"></use>
-  </svg>
-</span></a>
-          <a href="#" class="button ghost-white tiny has-icon has-icon--right">Clear <span class="ui-icon ui-static ui-small i-color ">
-  <svg>
-    <use xlink:href="#i-close"></use>
-  </svg>
-</span></a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</header> -->
-
-
-
-<header class="lead-header ng-scope" ng-if="hasEligibilityFilters()">
-  <div class="row">
-    <div class="medium-12 columns">
-      <h1 class="lead-header_title ng-scope" translate="LISTINGS.SHOWING_MATCHES_FOR">Become A Citizen</h1>
-      <div class="results-header">
-		  <p class="results-header_values ng-binding">Showing help for <strong class="ng-binding">Permanent Residents </strong>who speak <strong class="ng-binding">Spanish</strong></p> <p class="tiny"><a href="help.html">Start a new search</a> | <a href="help.html">Get help in all languages</a></p>
-      </div>
-   </div>
-  </div>
-  <section class="call-to-action">
+<section id="main-content" ui-view="container">
+	<header class="lead-header ng-scope">
 	  <div class="row">
-		<div class="medium-4 columns">
-			 <h2 class="t-delta t-serif c-oil">Check eligiblity reqirements to naturalize as a citizen.</h2>
-			<a href="https://sfpathways2citizenship.wordpress.com/eligibility/" class="button button primary" target="_blank">Am I eligible?</a>
-		</div>
-		<div class="medium-4 columns">
-			<h2 class="t-delta t-serif c-oil">Come to the next <a href="#">Pathways to Citizenship</a> workshop.</h2>
-			<a href="http://sfcitizenship.org/" class="button button primary" target="_blank">Sign-up</a>
-		</div>
-		<div class="medium-4 columns">
-			<h2 class="t-delta t-serif c-oil">Apply for citizenship online through <a href="#">Citizenshipworks</a>.</h2>
-			<a href="http://citizenshipworks.org/" class="button button primary" target="_blank">Apply Online</a>
-		</div>
+		<div class="medium-12 columns">
+		  <h1 class="lead-header_title ng-scope" translate="LISTINGS.SHOWING_MATCHES_FOR">Become A Citizen</h1>
+		  <div class="results-header">
+			  <p class="results-header_values ng-binding">Showing help for <strong >Permanent Residents </strong>who speak <strong >Spanish</strong></p> <p class="tiny"><a href="help.html">Start a new search</a> | <a href="help.html">Get help in all languages</a></p>
+		  </div>
+	   </div>
 	  </div>
-	</section>
-</header>
-
-
+	  <section class="call-to-action">
+		  <div class="row">
+			<div class="medium-4 columns">
+				 <h2 class="t-delta t-serif c-oil">Check eligiblity reqirements to naturalize as a citizen.</h2>
+				<a href="https://sfpathways2citizenship.wordpress.com/eligibility/" class="button button primary" target="_blank">Am I eligible?</a>
+			</div>
+			<div class="medium-4 columns">
+				<h2 class="t-delta t-serif c-oil">Come to the next <a href="#">Pathways to Citizenship</a> workshop.</h2>
+				<a href="http://sfcitizenship.org/" class="button button primary" target="_blank">Sign-up</a>
+			</div>
+			<div class="medium-4 columns">
+				<h2 class="t-delta t-serif c-oil">Apply for citizenship online through <a href="#">Citizenshipworks</a>.</h2>
+				<a href="http://citizenshipworks.org/" class="button button primary" target="_blank">Apply Online</a>
+			</div>
+		  </div>
+		</section>
+	</header>
 <section class="results-section border-top">
 	<div class="row">
   		<div class="small-12 columns">
@@ -531,9 +528,6 @@
 	  </div> 
 	</div>
  </section>
-</section>
-
-
 </section>
 
 <footer class="footer-section bg-tuatara ">
