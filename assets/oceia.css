@@ -1,8 +1,6 @@
 .question{ display: none; }
 .question:first-child{ display: block; }
 
-<<<<<<< HEAD
-=======
 #become-a-citizen header,
 #deportation-defense header,
 #rapid-response header,
@@ -41,7 +39,6 @@ header .call-to-action .columns .button {
 	display: block;
 }
 
->>>>>>> Scott-edits
 .nav-mobile_container{
   z-index: 1000;
   position: fixed;
@@ -74,7 +71,4 @@ header .call-to-action .columns .button {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> Scott-edits
+
