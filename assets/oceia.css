@@ -69,6 +69,9 @@ header .call-to-action .columns .button {
 	letter-spacing: normal;
 }
 
+.resources-list .label {
+  margin: .125rem;
+}
 
 
 
