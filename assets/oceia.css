@@ -1,7 +1,6 @@
 .question{ display: none; }
 .question:first-child{ display: block; }
 
-#resources header,
 #become-a-citizen header,
 #deportation-defense header,
 #rapid-response header,
