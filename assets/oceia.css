@@ -36,7 +36,7 @@ header .call-to-action h2 {
 
 header .call-to-action .columns .button {
 	width: 60%;
-	margin: 1em 0;
+	margin: 1em 0 4em;
 	display: block;
 }
 
@@ -74,5 +74,12 @@ header .call-to-action .columns .button {
   margin: .125rem;
 }
 
-
+@media only screen and (min-width: 60.0625em){
+  #become-a-citizen header .call-to-action h2{
+    min-height: 6em;
+  }
+  header .call-to-action .columns .button {
+    margin-bottom: 1em;
+  }
+}
 
