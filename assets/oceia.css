@@ -40,6 +40,29 @@ header .call-to-action .columns .button {
 	display: block;
 }
 
+.splash-wells select {
+	float: left;
+	width: 72%;
+}
+
+.splash-wells .welcome-block h2 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+
+.splash-wells .welcome-block p {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.splash-wells .form-container .button {
+	width: 25%;
+	float: right;
+	padding: .745rem .5rem;
+	letter-spacing: .1em;
+}
+
 .nav-mobile_container{
   z-index: 1000;
   position: fixed;
@@ -72,6 +95,17 @@ header .call-to-action .columns .button {
 
 .resources-list .label {
   margin: .125rem;
+}
+
+
+
+@media only screen and (min-width: 48.0625em) {
+	
+	.splash-wells .welcome-block {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-top: 2rem !important;
+	}	
 }
 
 @media only screen and (min-width: 60.0625em){
