@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- <title>Application</title> -->
-  <title>[Prototype] Get Immigration Help | City and County of San Francisco</title>
+  <title>[Prototype] Get Detention Defense | Get Immigration Help | City and County of San Francisco</title>
 
   
 
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="assets/toolkit.css">
   <link rel="stylesheet" href="assets/oceia.css">
   <!-- /toolkit styles -->
- 
+  
   <link rel="shortcut icon" href="https://businessportal.sfgov.org/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -23,7 +23,7 @@
 
 </head>
 
-<body id="help-page" class="center-body">
+<body id="deportation-defense">
 
   <!-- app icons -->
   <svg style="display: none;">
@@ -313,13 +313,16 @@
 
 <section><div class="translate-bar bar bg-tuatara ng-scope"><div class="row"><div class="medium-12 columns"><ul class="inline-list no-margin t-small right"><li class="c-iron show-for-medium-up">Select Language</li><li><a class="c-white" href="#">Español</a></li><li><a class="c-white t-ch" href="#">中文<span class="sr-only">Chinese</span></a></li><li><a class="c-white" href="#">Filipino</a></li></ul></div></div></div></section>
 
+
 <div class="version-bar bar bg-primary">
   <div class="row">
     <div class="medium-12 columns">
       <p class="text-right t-small c-white no-margin">This site is a demonstration <strong class="t-caps">PROTOTYPE</strong> for design and user testing.</p>
     </div>
   </div>
-</div><nav class="top-bar" role="navigation">
+</div>
+
+<nav class="top-bar" role="navigation">
   <div class="row">
   <ul class="title-area">
     <li class="name">
@@ -354,235 +357,223 @@
   </div>
 </nav>
 
-<header class="lead-header bg-image bg-gradient margin-bottom--2x">
+
+<section id="main-content" ui-view="container" class="ng-scope">
+<!-- <header class="lead-header">
   <div class="row">
-    <div class="large-12 columns">
-      <div class="lead-header_group">
-        <h1 class="lead-header_title c-white">Get Immigration Help</h1>
-         <div class="medium-8 columns no-padding show-for-medium-up">
-            <p class="t-epsilon t-serif c-white">Enter details about language and immigration status, and we'll show options for immigration assistance.</p>
-          </div>
+    <div class="medium-12 columns">
+      
+      <h1 class="lead-header_title">Showing resources for</h1>
+
+      <div class="results-header">
+        <p class="results-header_values">A <strong>permanent resident</strong> who speaks <strong>Spanish</strong></p>
+
+        <div class="results-header_actions">
+          <a href="#" class="button ghost-white tiny has-icon has-icon--right">Edit Eligibility <span class="ui-icon ui-static ui-small i-color ">
+  <svg>
+    <use xlink:href="#i-arrow-down"></use>
+  </svg>
+</span></a>
+          <a href="#" class="button ghost-white tiny has-icon has-icon--right">Clear <span class="ui-icon ui-static ui-small i-color ">
+  <svg>
+    <use xlink:href="#i-close"></use>
+  </svg>
+</span></a>
+        </div>
       </div>
+
     </div>
   </div>
+</header> -->
+
+
+
+<header class="lead-header text-left" ng-if="hasEligibilityFilters()">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h1 class="lead-header_title ng-scope" translate="LISTINGS.SHOWING_MATCHES_FOR">Get Detention Defense</h1>
+      <div class="results-header">
+        <p class="results-header_values ng-binding">Showing help for an immigrant <strong class="ng-binding">currently detained in San Francisco</strong> who speaks <strong class="ng-binding">Tagalog</strong></p>
+        <p class="tiny"><a href="help.html">Start a new search</a> | <a href="help.html">Get help in all languages</a></p>
+      </div>
+   </div>
+  </div>
+  <section class="margin-top--2x margin-bottom--2x">
+  <div class="row">
+		<div class="large-12 columns">
+			 <p>The organizations below specialize in representing immigrants who are currently detained. Call them to make an appointment for a consultation if the immigrant is a San Francisco resident who was detained in San Francisco.</p>
+		</div>
+	  </div>  
+  </section>
 </header>
 
-<section id="main-content">
-<!-- CONTENT AREA START -->
-  <div class="row margin-bottom--2x">
-  <div class="medium-6 medium-centered columns">
-  <div class="app-card form-card">
-  <section class="question" id="question-languages">
-    <div>
-    	<header class="app-inner leader border-bottom">
-    		<h2 class="app-card_question">What language does the immigrant who needs help speak?</h2>
-		</header>
-    </div>
-    <div class="app-inner inset">
-    <p class="c-steel">Choose all that apply.</p>
-    <div class="checkbox-group">
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="en" id="languages-en">
-        <label class="checkbox-block_label" for="languages-en">English</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="es" id="languages-es">
-        <label class="checkbox-block_label" for="languages-es">Spanish 
-| Español</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ch" id="languages-ch">
-        <label class="checkbox-block_label" for="languages-ch">Chinese | 普通话 | 廣東話 (Cantonese or Mandarin)</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="tl" id="languages-tl">
-        <label class="checkbox-block_label" for="languages-tl">Filipino | Tagalog</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ru" id="languages-ru">
-        <label class="checkbox-block_label" for="languages-ru">Russian</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="vi" id="languages-vi">
-        <label class="checkbox-block_label" for="languages-vi">Vietnamese 
-| Tiếng Việt</label>
-      </p>
-      <div id="more-languages">
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="am" id="languages-am">
-        <label class="checkbox-block_label" for="languages-am">Amharic</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ar" id="languages-ar">
-        <label class="checkbox-block_label" for="languages-ar">Arabic</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="br" id="languages-br">
-        <label class="checkbox-block_label" for="languages-br">Berber</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="fa" id="languages-fa">
-        <label class="checkbox-block_label" for="languages-fa">Farsi</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="fr" id="languages-fr">
-        <label class="checkbox-block_label" for="languages-fr">French | Français</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="de" id="languages-de">
-        <label class="checkbox-block_label" for="languages-de">German | Deutsch</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="hi" id="languages-hi">
-        <label class="checkbox-block_label" for="languages-hi">Hindi</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ja" id="languages-ja">
-        <label class="checkbox-block_label" for="languages-ja">Japanese | 日本語</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ko" id="languages-ko">
-        <label class="checkbox-block_label" for="languages-ko">Korean | 한국말</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="kr" id="languages-kr">
-        <label class="checkbox-block_label" for="languages-kr">Krio</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ti" id="languages-ti">
-        <label class="checkbox-block_label" for="languages-ti">Tigrinya</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="wo" id="languages-wo">
-        <label class="checkbox-block_label" for="languages-wo">Wolof</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="ac" id="languages-ac">
-        <label class="checkbox-block_label" for="languages-ac">Other African language</label>
-      </p>
-      <p class="checkbox-block">
-        <input type="checkbox" name="languages" value="pt" id="languages-pt">
-        <label class="checkbox-block_label" for="languages-pt">Portuguese | Português</label>
-      </p>
-      </div>   
-      <div>
-          <button class="button button-link button-lined medium-text-left" data-toggle="more-languages" data-shown="Less languages" data-hidden="More languages"></button>
-      </div>
+<section class="results-section border-top">
+	<div class="row">
+  		<div class="small-12 columns">
+			<div class="status-header_content">
+			  <hgroup class="status-header_group">
+				 <div class="status-header_icon">
+				   <span class="ui-icon ui-xlarge"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-building"></use></svg></span>
+				 </div>
+				 <h2 class="status-header_title gamma ng-binding">Who can help</h2>
+				 <p class="no-margin ng-binding ng-scope">The organizations below specialize in defending San Francisco residents who are currently detained.</p>
+			  </hgroup>
+			</div>
+  		</div>
 	</div>
-	  </div><!--app-inner inset-->
-    <div class="button-pager">
-      <div class="button-pager_row primary">
-        <button class="button primary" data-name="languages" data-next="question-resident" data-error="Please select one or more languages">Next</button>
-      </div>
-    </div>
-  </section>
 
-  <section class="question" id="question-resident">
-    <div class="form-back">
-      <a data-href="question-languages" class="lined margin-right">Back</a>
-    </div>
-   <div>
-    	<header class="app-inner leader border-bottom">
-    		<h2 class="app-card_question">Is the immigrant who needs help a permanent resident?</h2>
-		</header>
-    </div>
+	<div class="row">
+	  <div class="medium-8 columns">
+	   <ul class="resources-list block-list">
+
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Dolores Street Community Services (DSCS)</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <p class="t-tiny c-steel">Language Services: 
+          <span class="label radius secondary">Cantonese</span> 
+          <span class="label radius secondary">Español</span>
+          <span class="label radius secondary">Français</span>
+          <span class="label radius secondary">Italian</span>
+          <span class="label radius secondary">Português</span>
+        </p>
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+          </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+          167 Mission Street, 4th Floor, <br>
+          San Francisco, CA 94103
+          </p>
+        </div>    
+        <p>
+          <a href="415-928-5910" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+            </svg>
+          </span>
+          Call 415-928-5910
+          </a>
+          <a href="http://asianinc.org" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+            </svg>
+          </span>
+          Visit Website
+          </a>
+        </p>
+        </li>
+        <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Asian Law Caucus</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+          </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+          1 Main Street, Suite C, <br>
+          San Francisco, CA 94103
+          </p>
+        </div>    
+        <p>
+          <a href="415-255-2347" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+            </svg>
+          </span>
+          Call 415-200-0000
+          </a>
+          <a href="http://bishop.vetsequitycenter.org" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+            </svg>
+          </span>
+          Visit Website
+          </a>
+        </p>
+      </li>
+
+     
+
+       
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Pangea Legal Services</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <p class="t-tiny c-steel">Language Services: 
+          <span class="label radius secondary">español</span>
+          <span class="label radius secondary">Français</span>
+          <span class="label radius secondary">Português</span>
+          <span class="label radius secondary">German</span>
+          <span class="label radius secondary">Farsi</span>
+          <span class="label radius secondary">Krio</span>
+        </p>
+        <div class="a-icon-left d-block">
+          <span class="ui-icon ui-static ui-medium i-color ">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use>
+          </svg>
+          </span>          
+          <p class="offset-icon margin-bottom--half">
+          167 Mission Street, 4th Floor, <br>
+          San Francisco, CA 94103
+          </p>
+        </div>    
+        <p>
+          <a href="415-928-5910" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use>
+            </svg>
+          </span>
+          Call 415-928-5910
+          </a>
+          <a href="http://asianinc.org" class="button-on-small">
+          <span class="ui-icon ui-static ui-medium i-color ">
+            <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use>
+            </svg>
+          </span>
+          Visit Website
+          </a>
+        </p>
+        </li>
         
-    <div class="button-stack text-center padding-top row">
-     <p class="c-steel">Do they have a green card?</p>
-      <div>
-        <div>
-          <button class="button" data-next="results_citizenship.html">Yes</button>
-        </div>
-        <div>
-          <button class="button" data-next="question-detention">No</button>
-        </div>
-        <div>
-          <button class="button button-link button-lined medium-text-center" data-next="results_screening.html">I'm not sure</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="question" id="question-detention">
-    <div class="form-back">
-      <a data-href="question-resident" class="lined margin-right">Back</a>
-    </div>
-    <div>
-    	<header class="app-inner leader border-bottom">
-			<h2 class="app-card_question">Are they currently facing active deportation?</h2>
-		</header>
+
+		</ul>
+	  </div> 
 	</div>
-    <div class="app-inner inset">
-		 <div class="radio-group">
-			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_rapidresponse.html" id="detention-today">
-				<label class="radio-block_label" for="detention-today">Yes, they were just detained today in San Francisco</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_detentiondefense.html" id="detention-detained">
-				<label class="radio-block_label" for="detention-detained">Yes, they were detained in San Francisco before today and are still being held</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_screening.html" id="detention-elsewhere">
-				<label class="radio-block_label" for="detention-elsewhere">Yes, they are currently detained somewhere else outside of San Francisco</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="detention" value="question-case" id="detention-no">
-				<label class="radio-block_label" for="detention-no">No</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_screening.html" id="detention-notsure">
-				<label class="radio-block_label" for="detention-notsure">I'm not sure</label>
-			  </p>
-		</div>
-    </div>
-    
-    <div class="button-pager">
-      <div class="button-pager_row primary">
-        <button class="button primary" data-name="detention" data-error="Choose one of the following" data-next="value">Next</button>
+ </section>
+
+
+ <section class="bg-dust">
+    <div class="row padding-top--2x padding-bottom--2x">
+      <div class="small-12 medium-6 large-3 columns">
+        <a href="results_citizenship.html">Become A Citizen</a>
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        Get Deportation Defense
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <a href="results_rapidresponse.html">Call the Rapid Response Network</a>
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <a href="results_screening.html">Learn Your Rights and Options</a>
       </div>
     </div>
-  </section>
-
-  <section class="question" id="question-case">
-    <div class="form-back">
-      <a data-href="question-detention" class="lined margin-right">Back</a>
-    </div>
-    <div>
-    	<header class="app-inner leader border-bottom">
-			<h2 class="app-card_question">Do they have an active immigration court case?</h2>
-		</header>
-	</div>
-    <div class="app-inner inset">
-		 <div class="radio-group">
-			  <p class="radio-block">
-				<input type="radio" name="case" value="results_deportationdefense.html" id="case-court">
-				<label class="radio-block_label" for="case-court">Yes, they have an active deportation order and/or court date</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="case" value="results_screening.html" id="case-no">
-				<label class="radio-block_label" for="case-no">No</label>
-			  </p>
-			  <p class="radio-block">
-				<input type="radio" name="case" value="results_screening.html" id="case-notsure">
-				<label class="radio-block_label" for="case-notsure">I'm not sure</label>
-			  </p>
-		</div>
-    </div>
-    
-    <div class="button-pager">
-      <div class="button-pager_row primary">
-        <button class="button primary" data-name="case" data-error="Choose one of the following" data-next="value">Next</button>
+    <div class="row padding-bottom--2x">
+      <div class="medium-12 columns">
+        You can also see <a href="resources.html">contact information</a> for all San Francisco immigration legal aid organizations.</a>
       </div>
     </div>
-  </section>
+   </section>
 
-
-
-  </div>
-  </div>
-  </div>
-<!-- CONTENT AREA END -->
 </section>
 
 <footer class="footer-section bg-tuatara ">
@@ -591,8 +582,8 @@
       <img src="assets/logo-city-gray.png" class="city-logo margin-bottom--2x" alt="City & County of San Francisco Logo">
     </div>
     <div class="medium-8 medium-centered columns">
-      <p class="c-iron">This service is built in partnership with <br><a href="http://sfgov.org/oceia" class="a-white">Office of Civic Engagement &amp; Immigrant Affairs</a><br>
-         <a href="http://digitalservices.sfgov.org" class="a-white">San Francisco Digital Services</a>
+      <p class="c-iron">This service is built in partnership with <br><a href="http://sfgov.org/oceia" target="_blank" class="a-white">Office of Civic Engagement &amp; Immigrant Affairs</a><br>
+         <a href="http://digitalservices.sfgov.org" class="a-white" target="_blank">San Francisco Digital Services Team</a>
       </p>
 
     </div>
@@ -605,7 +596,7 @@
       <div class="medium-6 columns small-only-text-center">
         <ul class="inline-list">
           <li>
-            <a href="http://sfgov.org/oceia/contact-us">Contact</a>
+            <a href="#">Contact</a>
           </li>
         </ul>
       </div>
