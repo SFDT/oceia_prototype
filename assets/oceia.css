@@ -97,9 +97,47 @@ header .call-to-action .columns .button {
   margin: .125rem;
 }
 
+/*--Results Section--*/
+
+.results-section-header {
+	padding-bottom: 2rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #dedee0;
+}
+
+.language-filter {
+	margin-top: 2rem;
+}
+
+.language-filter h2 {
+	padding: 1.25rem;
+	background: #daeeff;
+	margin-top: -1.25rem;
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+}
 
 
-@media only screen and (min-width: 48.0625em) {
+.language-filter .checkbox-block_label {
+	font-size: 0.875rem;
+	line-height: 1.6;
+}
+
+.language-filter #more-languages {
+	margin-top: 1rem;
+}
+
+.language-filter .filter-footer ul {
+	margin-top: 2rem;
+}
+
+.language-filter .filter-footer li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+
+@media only screen and (min-width: 48.0625em) { /* 769px medium column break */
 	
 	.splash-wells .welcome-block {
 		padding-left: 3rem;
