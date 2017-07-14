@@ -10,7 +10,7 @@
   <title>[Prototype] Get Immigration Help | City and County of San Francisco</title>
 
   
-
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <!-- toolkit styles -->
   <link rel="stylesheet" href="assets/toolkit.css">
   <link rel="stylesheet" href="assets/oceia.css">
@@ -19,7 +19,7 @@
   <link rel="shortcut icon" href="https://businessportal.sfgov.org/sites/default/files/favicon_1.ico" type="image/vnd.microsoft.icon">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="assets/oceia.js"></script>
+ <script src="assets/oceia.js"></script>
 
 </head>
 
@@ -478,63 +478,75 @@
   </section>
 
   <section class="question" id="question-resident">
+
     <div class="form-back">
-      <a data-href="question-languages" class="lined margin-right">Back</a>
+      <a data-href="question-languages" class="lined margin-right"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a>
     </div>
-   <div>
-    	<header class="app-inner leader border-bottom">
-    		<h2 class="app-card_question">Is the immigrant who needs help a permanent resident?</h2>
-		</header>
-    </div>
-        
-    <div class="button-stack text-center padding-top row">
-     <p class="c-steel">Do they have a green card?</p>
-      <div>
-        <div>
-          <button class="button" data-next="results_citizenship.html">Yes</button>
-        </div>
-        <div>
-          <button class="button" data-next="question-detention">No</button>
-        </div>
-        <div>
-          <button class="button button-link button-lined medium-text-center" data-next="results_screening.html">I'm not sure</button>
-        </div>
+
+    <div>
+      <header class="app-inner leader border-bottom">
+        <h2 class="app-card_question">Does the person who needs help have a green card?</h2>
+		  </header>
+   </div>
+
+    <div class="app-inner inset">
+      <div class="radio-group">
+        <p class="radio-block">
+          <input type="radio" name="detention" value="results_rapidresponse.html" id="detention-today">
+          <label class="radio-block_label" for="detention-today">Yes, they have a green card.</label>
+        </p>
+        <p class="radio-block">
+          <input type="radio" name="detention" value="results_detentiondefense.html" id="detention-detained">
+          <label class="radio-block_label" for="detention-detained">No, they do not have a green</label>
+        </p>
+         <p class="radio-block">
+          <input type="radio" name="detention" value="results_detentiondefense.html" id="detention-detained">
+          <label class="radio-block_label" for="detention-detained">I'm not sure</label>
+        </p>
+      </div><!--radio-group-->
+    </div><!--app-inner-->
+    <div class="button-pager">
+      <div class="button-pager_row primary">
+        <button class="button primary" data-name="languages" data-next="results_screening.html">Next</button>
       </div>
     </div>
   </section>
   
   <section class="question" id="question-detention">
+
     <div class="form-back">
-      <a data-href="question-resident" class="lined margin-right">Back</a>
+      <a data-href="question-resident" class="lined margin-right"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a>
     </div>
+
     <div>
     	<header class="app-inner leader border-bottom">
-			<h2 class="app-card_question">Are they in detention right now?</h2>
-		</header>
-	</div>
+        <h2 class="app-card_question">Are they in detention right now?</h2>
+		  </header>
+    </div>
+
     <div class="app-inner inset">
-		 <div class="radio-group">
+      <div class="radio-group">
 			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_rapidresponse.html" id="detention-today">
-				<label class="radio-block_label" for="detention-today">Yes, they were just detained today in San Francisco</label>
+				  <input type="radio" name="detention" value="results_rapidresponse.html" id="detention-today">
+				  <label class="radio-block_label" for="detention-today">Yes, they were just detained today in San Francisco</label>
 			  </p>
 			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_detentiondefense.html" id="detention-detained">
-				<label class="radio-block_label" for="detention-detained">Yes, they were detained in San Francisco before today and are still being held</label>
+				  <input type="radio" name="detention" value="results_detentiondefense.html" id="detention-detained">
+				  <label class="radio-block_label" for="detention-detained">Yes, they were detained in San Francisco before today and are still being held</label>
 			  </p>
 			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_screening.html" id="detention-elsewhere">
-				<label class="radio-block_label" for="detention-elsewhere">Yes, they are currently detained somewhere else outside of San Francisco</label>
+				  <input type="radio" name="detention" value="results_screening.html" id="detention-elsewhere">
+				  <label class="radio-block_label" for="detention-elsewhere">Yes, they are currently detained somewhere else outside of San Francisco</label>
 			  </p>
 			  <p class="radio-block">
-				<input type="radio" name="detention" value="question-case" id="detention-no">
-				<label class="radio-block_label" for="detention-no">No</label>
+				  <input type="radio" name="detention" value="question-case" id="detention-no">
+				  <label class="radio-block_label" for="detention-no">No</label>
 			  </p>
 			  <p class="radio-block">
-				<input type="radio" name="detention" value="results_screening.html" id="detention-notsure">
-				<label class="radio-block_label" for="detention-notsure">I'm not sure</label>
+				  <input type="radio" name="detention" value="results_screening.html" id="detention-notsure">
+				  <label class="radio-block_label" for="detention-notsure">I'm not sure</label>
 			  </p>
-		</div>
+		  </div>
     </div>
     
     <div class="button-pager">
@@ -546,7 +558,7 @@
 
   <section class="question" id="question-case">
     <div class="form-back">
-      <a data-href="question-detention" class="lined margin-right">Back</a>
+      <a data-href="question-detention" class="lined margin-right"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a>
     </div>
     <div>
     	<header class="app-inner leader border-bottom">
