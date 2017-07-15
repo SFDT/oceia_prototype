@@ -24,6 +24,16 @@
 	text-decoration: none;
 }
 
+#main-content:focus{
+	outline: none;
+}
+
+/* Tooltip styles */
+.ui-tooltip{
+  background: #504F4F;
+  color: #fff;
+}
+
 header .results-header_values {text-transform: none;}
 
 header p {
