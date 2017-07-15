@@ -24,6 +24,10 @@
 	text-decoration: none;
 }
 
+#main-content:focus{
+	outline: none;
+}
+
 /* Tooltip styles */
 .ui-tooltip{
   background: #504F4F;
